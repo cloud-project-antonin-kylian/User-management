@@ -1,6 +1,5 @@
 package org.userManagement.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.userManagement.Exceptions.UserNotFoundException;
 import org.userManagement.entities.User;
 import org.userManagement.repositories.UserRepository;
@@ -29,13 +28,13 @@ public class UserService {
     }
 
     public User updateUser( User user) throws UserNotFoundException {
-        User existingUser = (User) userRepository.findById(user.getId()).orElseThrow(() -> new UserNotFoundException("User not found with ID: " + user.getId()));
+        //User existingUser = (User) userRepository.findById(user.getId()).orElseThrow(() -> new UserNotFoundException("User not found with ID: " + user.getId()));
         return userRepository.updated(user);
     }
 
     public void deleteUser(int userId) throws UserNotFoundException {
         Optional<User> userOptional = userRepository.findById(userId);
-        if (((Optional<?>) userOptional).isPresent()) {
+        if (userOptional.isPresent()) {
             userRepository.deleteById(userId);
         } else {
             throw new UserNotFoundException("User not found with ID: " + userId);

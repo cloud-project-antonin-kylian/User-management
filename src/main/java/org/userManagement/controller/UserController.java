@@ -1,7 +1,6 @@
 package org.userManagement.controller;
 
 import org.userManagement.Exceptions.UserNotFoundException;
-import org.userManagement.repositories.*;
 import org.userManagement.entities.User;
 import org.userManagement.services.*;
 
