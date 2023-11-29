@@ -6,10 +6,12 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 
-# Build JAR
+# Build JAR, we can add -DskipTests to ignore test
 RUN mvn clean install
+
 
 EXPOSE 8080
 
 # Command to run the service
-ENTRYPOINT ["java", "-jar", "user-management-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["mvn", "test"]
+#ENTRYPOINT ["/bin/bash"]
