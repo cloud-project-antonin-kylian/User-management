@@ -29,4 +29,18 @@ Clone the repository and navigate to the project directory:
 
 ```bash
 git clone https://github.com/your-username/user-management-service.git
-cd user-management-service```
+cd user-management-service
+```
+### Running Locally 
+
+To run the project use maven or IDE like intellij or VSCode.
+
+### Docker 
+- Build the Docker Image, in the directory containing your Dockerfile.
+```bash
+docker build -t mvn-jdk17 .
+```
+- Run the Docker Container
+```bash
+docker run -p 8080:8080 mvn-jdk17:latest
+```
