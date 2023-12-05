@@ -2,9 +2,7 @@ package org.userManagement.controller;
 
 import org.userManagement.Exceptions.UserNotFoundException;
 import org.userManagement.entities.User;
-import org.userManagement.services.*;
-
-
+import org.userManagement.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

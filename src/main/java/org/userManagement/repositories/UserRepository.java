@@ -1,11 +1,13 @@
 package org.userManagement.repositories;
 
+import org.springframework.stereotype.Repository;
 import org.userManagement.entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public class UserRepository {
 
     private final List<User> users = new ArrayList<>();

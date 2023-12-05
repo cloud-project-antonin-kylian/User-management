@@ -1,5 +1,6 @@
 package org.userManagement.services;
 
+import org.springframework.stereotype.Service;
 import org.userManagement.Exceptions.UserNotFoundException;
 import org.userManagement.entities.User;
 import org.userManagement.repositories.UserRepository;
@@ -7,6 +8,7 @@ import org.userManagement.repositories.UserRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserService {
     private final UserRepository userRepository;
 
