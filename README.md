@@ -44,3 +44,11 @@ docker build -t mvn-jdk17 .
 ```bash
 docker run -p 8080:8080 mvn-jdk17:latest
 ```
+
+### Kubernetes Deployment
+
+We can deploy this service to Kubernetes using deployment.yaml with this command :
+```bash
+minikube start
+kubectl apply -f .\deploy\deployment.yaml
+```
