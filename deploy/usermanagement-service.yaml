@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-management-service
+spec:
+  ports:
+    - nodePort: 31280
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: user-management
+  type: NodePort # Adjust the service type based on your requirements (ClusterIP, NodePort, LoadBalancer, etc.)
