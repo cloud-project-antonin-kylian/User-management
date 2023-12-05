@@ -51,4 +51,5 @@ We can deploy this service to Kubernetes using deployment.yaml with this command
 ```bash
 minikube start
 kubectl apply -f .\deploy\deployment.yaml
+kubectl apply -f .\deploy\usermanagement-service.yaml
 ```
