@@ -13,5 +13,5 @@ RUN mvn clean install
 EXPOSE 8080
 
 # Command to run the service
-ENTRYPOINT ["mvn", "test"]
+ENTRYPOINT ["java", "-jar", "target/user-management-1.0-SNAPSHOT.jar"]
 #ENTRYPOINT ["/bin/bash"]
