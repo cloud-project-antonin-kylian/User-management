@@ -5,9 +5,9 @@ metadata:
 spec:
   ports:
     - nodePort: 31280
-      port: 8080
+      port: 80
       protocol: TCP
       targetPort: 8080
   selector:
-    app: user-management
+    app: user-management-deployment
   type: NodePort # Adjust the service type based on your requirements (ClusterIP, NodePort, LoadBalancer, etc.)
