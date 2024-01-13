@@ -43,7 +43,7 @@ docker build -t user_service .
 OR 
 - Get the Docker Image with Dockerhub.
 ```bash
-docker pull antoninlampin/user_service
+docker pull cloudprojectantoninkylian/user-management:1.0.0
 ```
 - Run the Docker Container
 ```bash
