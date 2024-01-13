@@ -38,11 +38,11 @@ To run the project use maven or IDE like intellij or VSCode.
 ### Docker 
 - Build the Docker Image, in the directory containing your Dockerfile.
 ```bash
-docker build -t mvn-jdk17 .
+docker build -t user_service .
 ```
 - Run the Docker Container
 ```bash
-docker run -p 8080:8080 mvn-jdk17:latest
+docker run -p 8080:8080 user_service:latest
 ```
 
 ### Kubernetes Deployment
