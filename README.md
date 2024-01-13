@@ -40,6 +40,11 @@ To run the project use maven or IDE like intellij or VSCode.
 ```bash
 docker build -t user_service .
 ```
+OR 
+- Get the Docker Image with Dockerhub.
+```bash
+docker pull antoninlampin/user_service
+```
 - Run the Docker Container
 ```bash
 docker run -p 8080:8080 user_service:latest
