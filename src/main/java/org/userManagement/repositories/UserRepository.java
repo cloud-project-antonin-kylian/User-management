@@ -2,6 +2,7 @@ package org.userManagement.repositories;
 
 import org.springframework.stereotype.Repository;
 import org.userManagement.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
 import java.util.List;

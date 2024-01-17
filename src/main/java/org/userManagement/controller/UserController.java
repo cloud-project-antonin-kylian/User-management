@@ -1,5 +1,8 @@
 package org.userManagement.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import org.userManagement.Exceptions.UserNotFoundException;
 import org.userManagement.entities.User;
 import org.userManagement.services.UserService;
@@ -10,9 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 public class UserController {
-
+    @Autowired
     private final UserService userService;
 
     public UserController(UserService userService) {
