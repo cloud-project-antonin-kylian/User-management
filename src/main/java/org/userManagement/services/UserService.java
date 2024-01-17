@@ -34,12 +34,15 @@ public class UserService {
 
     public User updateUser( User user) throws UserNotFoundException {
         //User existingUser = (User) userRepository.findById(user.getId()).orElseThrow(() -> new UserNotFoundException("User not found with ID: " + user.getId()));
-        return userRepository.updated(user);
+        if (userRepository.existsById(user.getId())) {
+            return userRepository.save(user);
+        } else {
+            throw new UserNotFoundException("User not found with ID: " + user.getId());
+        }
     }
 
     public void deleteUser(int userId) throws UserNotFoundException {
-        Optional<User> userOptional = userRepository.findById(userId);
-        if (userOptional.isPresent()) {
+        if (userRepository.existsById(userId)) {
             userRepository.deleteById(userId);
         } else {
             throw new UserNotFoundException("User not found with ID: " + userId);
