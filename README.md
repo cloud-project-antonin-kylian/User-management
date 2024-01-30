@@ -1,6 +1,7 @@
 # User Management Service
 
 This project is a simple User Management Service implemented in Java. It provides functionality to retrieve user information by ID. We can create, update and delete users.
+You can use the postman_collection.json to test the service.
 
 ## Table of Contents
 
